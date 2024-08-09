@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern</title>
+</head>
+<body>
+   <form action="">
+    <h1>Patter attribute in HTML</h1><br>
+
+    pattern: <input type="text" pattern="colou?r"><br>
+    pattern: <input type="text" pattern="colou*r"><br>
+    pattern: <input type="text" pattern="colou+r"><br>
+    pattern: <input type="text" pattern=".at"><br>
+    pattern: <input type="text" pattern="red|green|blue"><br>
+    pattern: <input type="text" pattern="gmail\.com"><br>
+    pattern: <input type="text" pattern="[a,c]"><br>
+    pattern: <input type="text" pattern="\d\d\d"><br>
+    pattern: <input type="text" pattern="\D"><br>
+    pattern: <input type="text" pattern="[^a,d,c]"><br>
+    pattern: <input type="text" pattern="[a-z,A-z,0-9,_]"><br>
+    pattern: <input type="text" pattern="\w"><br>
+    pattern: <input type="text" pattern="\W"><br>
+    pattern: <input type="text" pattern="\d\s\D"><br>
+    pattern: <input type="text" pattern="color\i"><br>
+
+    <!-- Quantifier -->
+    pattern: <input type="text" pattern="\d{10}"><br>
+    pattern: <input type="text" pattern="\d{2,10}"><br>
+     <!-- Write a pattern to validate mobile number starting with "+91 and have excatly 10 digits number after +91" -->
+      Pattern: <input type="text" pattern="\+91[8-9]{2}\d{8}"><br>
+    <input type="submit">
+   </form>
+</body>
+</html>
