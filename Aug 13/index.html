@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>comboBox</title>
+    <title>Forms continued
+    </title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
+    <form action="">
+        <dl>
+            <dt>Select Product</dt>
+            <dd>
+               
+                <select name="product">
+                    <option> <span class="bi bi-translate"></span> Select a Product</option>
+                    <optgroup label="Electronics">
+                        <option> Televisions</option>
+                        <option disabled>Mobiles</option>
+                    </optgroup>
+                    <optgroup label="Footwear">
+                        <option>Casuals</option>
+                        <option selected value="FTWSN001">Sneakers</option>
+                        <option>Boots</option>
+                    </optgroup>
+                </select>
+                <button>Submit</button>
+            </dd>
+        </dl>  
+        <!-- <select name="ListBox" id="" size="3" value="ListBox" multiple> 
+            <option value="1">List item 1</option>
+            <option value="2">List item 2</option>
+            <option value="3">List item 3</option>
+        </select>   -->
+        <meter min="1" max="100" value="10" low="0" high="0"> </meter>  Green <br>
+        <progress min="1" max="100" value="20"> </progress><br>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input type="text" name="Name"></dd>
+            <dd>
+                <input type="submit" value="Login">
+                <input type="reset" value="Cancel">
+                <input type="button" value="Print">
+            </dd>
+            <dd>
+                <button type="submit"> <span class="bi bi-person-fill"></span> Login </button>
+                <button type="reset">  <span class="bi bi-exclamation-circle"></span> Cancel </button>
+                <button type="button"> <span class="bi bi-printer-fill"></span> Print </button>
+            </dd>
+         </dl>
+    </form>
     
 </body>
 </html>

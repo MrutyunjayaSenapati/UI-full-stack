@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css classes for Form Elements</title>
+    <style>
+        input:read-only{
+            cursor: not-allowed;
+            background-color: lightblue;
+            border: none;
+        }
+        button:disabled{
+            border-color: blanchedalmond;
+            cursor: not-allowed;
+        }
+        .terms+label{
+            color: red;
+        }
+        .terms:checked+label{
+            color: rgb(210, 205, 234);
+        }
+        .terms~button{
+            display: none;
+        }
+        .terms:checked~button{
+            display: block;
+        }
+        input+div{
+            display: none;
+        }
+        input:focus+div{
+            display: block;
+            font-size: 14px;
+            color: red;
+        }
+        input:focus{
+            outline: none;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+        }
+        button{
+            background-color: rgb(210, 205, 234);
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            &:hover{
+                background-color: blue;
+                color: wheat;
+                cursor: grab;
+                
+            }
+        }
+        input+span{
+            display: none;
+        }
+        input:required+span{
+            display: inline;
+            color: red;
+        }
+        input:required{
+            border: 1px solid red;
+        }
+        input:optional{
+            border: 1px solid goldenrod;
+        }
+        input:valid+span{
+            display: none;
+        }
+        input:valid{
+            border: 1px solid black;
+        }
+        .mobile~div{
+            display: none;
+        }
+        .mobile:invalid~div{
+            display: block;
+            color: red;
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>User Registration Form</legend>
+            <dl>
+                <dt>User Name</dt>
+                <dd><input type="text" class="userName" value="John" readonly></dd>
+                <dt>Age</dt>
+                <dd><input type="number"value="22" readonly></dd>
+            </dl>
+            <button disabled>Submit</button>
+
+        </fieldset>
+        <legend>Terms of Service</legend>
+        <textarea disabled="4" cols="40" id="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem repellendus libero nam vero fugiat velit omnis, fuga nostrum dicta quod delectus. Ipsa, perferendis ex. Facilis tempore quae praesentium omnis quam.</textarea><br>
+        <input type="checkbox" class="terms" ><label for="">I Accept</label>
+        <br><br>
+        <button>Submit</button>
+    </form>
+    <form action="">
+        <legend>Focus & hover</legend>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input type="text" placeholder="Name in Block Letter">
+            <div>Name in block Letters</div></dd>
+            <button>Register</button>
+        </dl>
+    </form>
+    <form action="">
+        <fieldset>
+        <legend>Elements Validation State Classes</legend>
+        <dl>
+            <dl>
+                <dt>User Name</dt>
+                <dd><input type="text" class="UserName" placeholder="Enter User name" required><span>*</span>
+                <div>Name Required</div></dd>
+
+                <dt>Password</dt>
+                <dd><input type="password" class="password" placeholder="Enter Password"><span>*</span>
+                <div>Password Required</div>
+                </dd>
+                
+                <dt>Mobile</dt>
+                <dd><input type="text" class="mobile" pattern="\+91\d{10}" placeholder="Enter mobile number"><span>*</span>
+                <div>Invalid Mobile +91 and 10 digits</div></dd>
+
+                <dt>Age</dt>
+                <dd><input type="number" min="15" max="30"  class="Age" placeholder="Age" >
+                <div>Age 15 to 30 only</div></dd>
+
+
+
+
+              
+            </dl>
+        </dl>
+        <button>Submit</button>
+    </fieldset>
+    </form>
+    
+</body>
+</html>
