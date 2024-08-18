@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        .range{
+            width: 90%;
+        }
+    </style>
+</head>
+<body class="container-fluid bg-secondary ">
+    <div class="m-4 p-4 bg-light">
+        <div class="row">
+            <div class="col">
+                Amount you need <input type="text" size="15">
+            </div>
+            <div class="col">Interest Rate<input type="text" size="4">%
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col">
+                <input type="range" class="range">
+                <div class="d-flex justify-content-between">
+                    <span>1,00,000</span>
+                    <span>5,00,000</span>
+                </div>
+                <div class="col">
+                    <input type="range" class="range">
+                    <div class="d-flex justify-content-between">
+                        <span>1</span>
+                        <span>5</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <input type="range" class="range">
+                    <div class="d-flex justify-content-between">
+                        <span>10.45%</span>
+                        <span>18.45%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-end">
+                    <button>Calculate</button>
+            </div>
+        </div>
+
+    </div>
+
+    
+</body>
+</html>

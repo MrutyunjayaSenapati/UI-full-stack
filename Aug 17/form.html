@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms with Icons</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        body{
+            background: rgb(2,0,36);
+
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
+        }
+    </style>
+</head>
+<body class="container-fluid d-flex justify-content-center align-items-center " style="height: 100vh;">
+    <form class="bg-light p-4 rounded" style="width: 400px; min-height: 300px;">
+        <fieldset>
+            <legend class="fw-bold text-center">Signin</legend>
+
+            <!-- User Name with Icon -->
+            <div class="mb-2">
+                <label for="UserName" class="form-label">User Name</label>
+                <div class="input-group">
+                    <span class="input-group-text" ><i class="bi bi-person-fill"></i></span>
+                    <input type="text" class="form-control" id="UserName" name="UserName" placeholder="Enter your username">
+                </div>
+            </div>
+
+            <!-- Password with Icon -->
+            <div class="mb-2">
+                <label for="Password" class="form-label">Password</label>
+                <div class="input-group">
+                    <span class="input-group-text" ><i class="bi bi-lock-fill"></i></span>
+                    <input type="password" class="form-control" id="Password" name="Password" placeholder="Enter your password">
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label for="City" class="form-label">Your City</label>
+                <select id="City" name="City" class="form-select">
+                    <option value="">Select City</option>
+                    <option value="BBSR">BBSR</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                </select>           
+            </div>
+
+            <div class="form-check form-switch mb-2">
+                <input class="form-check-input" type="checkbox" id="KeepSignedIn">
+                <label class="form-check-label" for="KeepSignedIn">Keep me signed in</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Signin</button>
+        </fieldset>
+    </form>
+</body>
+</html>
