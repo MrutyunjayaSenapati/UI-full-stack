@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <h2 class="">Alerts</h2>
+    <div class="alert alert-success alert-dismissible fade show ">
+        <h2 class="alert-title">Registered</h2>
+        <button class="btn btn-close" data-bs-dismiss="alert"></button>
+        <p>Registration completed successfull</p>
+        <a href="#" class="alert-link">Help</a>
+        <button data-bs-dismiss="alert" class="btn-btn-success">OK</button>
+    </div>
+
+
+    <div class="alert alert-danger alert-dismissible w-50">
+        <h4>Please check the following errors in form</h4>
+        <ul>
+            <li>Name Required</li>
+            <li>Password min 4 to 10 chars only</li>
+            <li>Age min 15 required</li>
+        </ul>
+        <button class="btn btn-danger" data-bs-dismiss="alert">OK</button>
+    </div >
+    
+
+    <div class=" alert  alert-warning alert-dismissible  w-50 ">
+    <button class=" btn btn-close"data-bs-dismiss="alert" ></button>
+    <h3 class="alert alert-title align-content-center">Sorry!</h3>
+    <p>Your transction has failed.</p>
+    <p>Please go back and try again.</p>
+    <button class=" btn btn-danger" data-bs-dismiss="alert">OK</button>
+    </div>
+    
+
+    
+</body>
+</html>
