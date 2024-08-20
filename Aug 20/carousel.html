@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="..//node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <div class="carousel slide mt-2" data-bs-ride="carousel" id="banners" data-bs-theme="dark">
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="2000">
+            <img height="300" src="../public/image/slide-1.png" class="w-100 d-block" alt="">
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+            <img height="300" src="../public/image/slide-2.png" class="w-100 d-block"alt="">
+        </div>
+        
+        <div class="carousel-item" data-bs-interval="2000">
+            <img height="300" src="../public/image/slide-3.png" class="w-100 d-block" alt="">
+        </div>
+    </div>
+
+<button data-bs-slide="prev" data-bs-target="#banners" class="carousel-control-prev">
+    <span class="carousel-control-prev-icon"></span>
+</button>
+
+<button data-bs-slide="next" data-bs-target="#banners" class="carousel-control-next">
+    <span class="carousel-control-next-icon"></span>
+</button>
+
+<div class="carousel-indicators">
+    <button class="active btn btn-primary   rounded-circle p-1" data-bs-slide-to="0" data-bs-target="#banners" style="width: 6px; height: 6px;"></button>
+
+    <button data-bs-slide-to="1" data-bs-target="#banners" class=" btn btn-primary  rounded-circle p-1"  style="width: 6px; height: 6px;"></button>
+
+    <button data-bs-slide-to="2" data-bs-target="#banners" class=" btn  btn-primary rounded-circle p-1" style="width: 6px; height: 6px;"></button>
+  
+
+</div>
+    </div>
+</body>
+</html>
