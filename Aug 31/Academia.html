@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            background-image: url("../public/image/boy-book.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .row-1 {
+            display: flex;
+            justify-content: space-around;
+            padding: 30px;
+            font-size: 24px;
+            font-family: Arial;
+            color:white;
+            text-shadow: 1px 1px 2px black;
+        }
+        .title {
+            font-size: 75px;
+            font-weight: bold;
+        }
+        .sub-title {
+            font-size: 25px;
+        }
+        .bi-facebook, .bi-twitter, .bi-instagram, .bi-linkedin {
+            display: inline-block;
+            background-color: orange;
+            color:white;
+            padding: 20px;
+            font-size: 30px;
+            border-radius: 50%;
+            height: 30px;
+        }
+        .row-2 {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgba(234, 126, 3, 0.5);
+            color:white;
+            padding: 20px;
+            font-size: 25px;
+            font-family: Arial;
+        }
+        section {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            background-color: white;
+            height: 1000px;
+            margin-top: 600px;
+        }
+        .left-panel {
+            background-image: url("../public/image/boy-laptop.jpg");
+            background-size: cover;
+        }
+        .card {
+            margin: 50px;
+            font-size: 24px;
+            font-family: Arial;
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+            padding: 20px;
+            box-shadow: 2px 2px 2px gray;
+            height: 250px;
+            background-color: whitesmoke;
+        }
+        .card-title {
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .card:hover {
+            background-color: orange;
+            color:white;
+        }
+        .card-p{
+
+            overflow: hidden;
+        }
+    </style>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+        <div class="row-1">
+            <div>
+                <div class="title">ACADEMIA</div>
+                <div class="sub-title">ONLINE EDUCATION & LEARNING</div>
+            </div>
+            <div>
+                <span class="bi bi-clock"> Monday - Friday </span>
+            </div>
+            <div>
+                <span class="bi bi-telephone"> Call Us</span>
+            </div>
+            <div>
+                <span class="bi bi-facebook"></span>
+                <span class="bi bi-twitter"></span>
+                <span class="bi bi-instagram"></span>
+                <span class="bi bi-linkedin"></span>
+            </div>
+        </div>
+        <div class="row-2">
+            <span>Home</span>
+            <span>Courses</span>
+            <span>About</span>
+            <span>Team</span>
+        </div>
+    </header>
+    <section>
+        <div class="left-panel">
+
+        </div>
+        <div class="right-panel">
+            <div class="card">
+                <div>
+                    <span class="bi bi-book-fill"></span>
+                </div>
+                <div>
+                    <div class="card-title">Online Courses</div>
+                    <p class="card-p">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <span class="bi bi-book-fill"></span>
+                </div>
+                <div>
+                    <div class="card-title">Online Courses</div>
+                    <p class="card-p">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <span class="bi bi-book-fill"></span>
+                </div>
+                <div>
+                    <div class="card-title">Online Courses</div>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HouseVibe</title>
+  <meta name="description" content="Professional moving services in India with a personal touch.">
+  <meta name="keywords" content="moving, relocation, professional movers, India, moving services">
+  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body class="container-fluid">
+  <header>
+    <nav class="navbar navbar-expand-lg"> 
+      <div class="container-fluid">
+        <span class="bi bi-box-seam-fill fw-bold fs-3 text-warning">HouseVibe</span>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Services</a>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex me-2" role="search">
+            <input class="form-control me-2" type="search" placeholder="Postcode" aria-label="Search">
+            <button type="submit" class="btn btn-success">Check</button>
+          </form>
+        </div> 
+      </div>
+    </nav>
+  </header>
+
+  <section class="container-fluid">
+    <div class="px-4 pt-5 my-5 text-center">
+      <h1 class="display-4 fw-bold text-body-emphasis">Move With Joy</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Welcome to our website, where we are on a mission to provide exceptional moving services to customers in India...</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+          <button type="button" class="btn btn-primary btn-lg px-4">Get a Quote</button>
+          <button type="button" class="btn btn-outline-secondary">Contact Us</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container px-4 py-5" id="featured-3">
+      <h2 class="pb-2 border-bottom">Why Move With Us?</h2>
+      <div class="row g-4 row-cols-1 row-cols-lg-3">
+        <div class="feature col">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 border rounded-2">
+            <span class="bi bi-briefcase p-3" aria-hidden="true"></span>
+          </div>
+          <h3 class="fs-2">Professional</h3>
+          <p>Our team of professional movers are trained to prioritize efficiency, organization, and attention to detail...</p>
+          <a href="#">Get a quote <span class="bi bi-chevron-right"></span></a>
+        </div>
+
+        <div class="feature col">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 border rounded-2">
+            <span class="bi bi-bus-front p-3" aria-hidden="true"></span>
+          </div>
+          <h3 class="fs-2">Countrywide</h3>
+          <p>We offer a range of services to suit your individual needs, whether you're moving locally or across the country...</p>
+          <a href="#">Get a quote <span class="bi bi-chevron-right"></span></a>
+        </div>
+
+        <div class="feature col">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 border rounded-2">
+            <span class="bi bi-chat-square-heart p-3" aria-hidden="true"></span>
+          </div>
+          <h3 class="fs-2">Personal Touch</h3>
+          <p>At our core, we believe that moving should be an exciting and positive experience, not a stressful one...</p>
+          <a href="#">Get a quote <span class="bi bi-chevron-right"></span></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="banners" class="carousel slide w-50 d-flex mx-auto" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="1000">
+          <img height="400" src="./couple.jpg" class="w-100 d-block" alt="Couple moving">
+        </div>
+        <div class="carousel-item" data-bs-interval="1000">
+          <img height="400" src="./dog.jpg" class="w-100 d-block" alt="Dog during move">
+        </div>
+        <div class="carousel-item" data-bs-interval="1000">
+          <img height="400" src="./family.jpg" class="w-100 d-block" alt="Family moving">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#banners" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#banners" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#banners" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#banners" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#banners" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>HouseVibe</h5>
+          <p>Your trusted partner in making every move stress-free and seamless.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+            <li><a href="#" class="text-white text-decoration-none">About</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Services</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled">
+            <li><span class="bi bi-telephone-fill"></span> +1 234 567 890</li>
+            <li><span class="bi bi-envelope-fill"></span> info@housevibe.com</li>
+            <li><span class="bi bi-geo-alt-fill"></span> 123 Main St, City, Country</li>
+          </ul>
+          <div class="d-flex">
+            <a href="#" class="text-white me-3"><span class="bi bi-facebook fs-4"></span></a>
+            <a href="#" class="text-white me-3"><span class="bi bi-twitter fs-4"></span></a>
+            <a href="#" class="text-white"><span class="bi bi-instagram fs-4"></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <p>&copy; 2024 HouseVibe. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>

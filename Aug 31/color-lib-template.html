@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACADEMEIA</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+   
+    
+    <style>
+        body {
+            height: 100vh;
+            background-image: url("../public/image/boy-book.jpg");
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: darkslategray;
+            font-family: Arial, Helvetica, sans-serif;
+            background-position: center;
+            
+        }
+
+        header {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .row1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .sub-title {
+            font-size: 16px;
+            color: gray;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: lightyellow;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: darkslategray;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .navbar a::after {
+            content: "";
+            height: 3px;
+            width: 0;
+            background-color: darkorange;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s;
+        }
+
+        .navbar a:hover::after,
+        .navbar a.active::after {
+            width: 100%;
+        }
+
+        .certificate-btn {
+            background-color: darkorange;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .certificate-btn:hover {
+            background-color: darkred;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background-color: white;
+            margin-top: 500px;
+            padding: 50px;
+            gap: 30px;
+        }
+
+        .left-panel {
+            background-image: url("../public/image/boy-laptop.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            height: 500px;
+        }
+
+        .right-panel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: whitesmoke;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .card:hover {
+            background-color: orange;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            section {
+                grid-template-columns: 1fr;
+            }
+
+            .left-panel {
+                height: 300px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="row1">
+            <div>
+                <div class="title">ACADEMIA</div>
+                <div class="sub-title">ONLINE EDUCATION AND LEARNING</div>              
+            </div>
+            <div>
+                <span class="bi bi-clock">Monday-Friday</span>
+            </div>
+            <div>
+                <span class="bi bi-telephone">Call Us</span>
+            </div>
+            <div>
+                <span class="bi bi-facebook"></span>
+                <span class="bi bi-twitter"></span>
+                <span class="bi bi-instagram"></span>
+                <span class="bi bi-linkedin"></span>
+            </div>
+        </div>
+        <div class="navbar">
+            <div>
+                <a href="#" class="active">Home</a>
+                <a href="#">All Courses</a>
+                <a href="#">About</a>
+                <a href="#">Team</a>
+                <a href="#">Pricing</a>
+                <a href="#">Journal</a>
+                <a href="#">Contact</a>
+            </div>
+            <button class="certificate-btn">Get Certificate</button>
+        </div>
+    </header>
+    <section>
+        <div class="left-panel"></div>
+        <div class="right-panel">
+            <div class="card">
+                <div class="card-title"><span class="bi bi-book"></span> Online Courses</div>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            </div>
+            <div class="card">
+                <div class="card-title"><span class="bi bi-award"></span> Earn A Certificate</div>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            </div>
+            <div class="card">
+                <div class="card-title"><span class="bi bi-person"></span> Learn with Experts</div>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

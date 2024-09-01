@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        ul {
+            list-style: none;
+            display: flex;
+        }
+        li::before {
+            content: " > ";
+            color:gray;
+            font-size: 14px;
+            font-weight: bold;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        li:first-child::before {
+            content: "";
+        }
+        p::selection {
+            background-color: yellow;
+            text-decoration: underline 2px double;
+            font-size: 50px;
+        }
+        p::first-line {
+            color:blue;
+        }
+        p::first-letter{
+            color: brown;
+            font-weight: bold;
+        }
+    </style>
+     
+</head>
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur repudiandae possimus fuga cumque asperiores vero numquam reiciendis ea ad molestias expedita autem error, voluptate perspiciatis? Beatae obcaecati ipsum quaerat atque? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates optio corrupti perferendis reprehenderit ratione tenetur laborum earum, corporis quod, doloribus quidem expedita voluptatum dignissimos dolorem ducimus autem exercitationem, officia neque!</p>
+    <ul>
+        <li>Home</li>
+        <li>Electronics</li>
+        <li>Mobiles</li>
+        <li>Apple Phones</li>
+        <li>iPhone 14</li>
+    </ul>
+</body>
+</html>

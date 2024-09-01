@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rational Selector</title>
+    <style>
+        header >h1{
+            background-color: blue;
+        }
+        ul >li{
+            background-color: green;
+        }
+        div ~ p{
+            background-color: yellow;
+        }
+     ul ~ p{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1>Hello World</h1>
+    <ul>
+        <li>row 1</li>
+        <li>row 2</li>
+        <li>row 3</li>
+        <li>row 4</li>
+        <section>
+            <p> helo</p>
+        </section>
+        <li>row 5</li>
+    </ul>
+    <p>hi</p>
+    <ul>
+        <li>a</li>
+        <li>b</li>
+    </ul>
+    </header>
+    <div>
+        <p>Paragraph 2.</p>
+      </div>
+      
+      <p>Paragraph 3.</p>
+      <code>Some code.</code>
+      <p>Paragraph 4.</p>
+</body>
+</html>

@@ -1,0 +1,10 @@
+figure {
+    display: none;
+ }
+ .ticket {
+    border: none;
+    color:black;
+ }
+ button {
+    display: none;
+ }

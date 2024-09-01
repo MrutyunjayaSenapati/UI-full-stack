@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        header{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            padding: 10px;
+        }
+        button{
+            font-size: 20px;
+        }
+        .brand-title{
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .brand-title{
+            font-weight: bold;
+            font-size: 24px;
+        }
+        @media screen and(orientation:landscape) {
+            
+            header{
+                display: grid;
+                grid-template-columns: 2fr 8fr 2fr;
+            }
+            button{
+                display: none;
+            }
+            nav span{
+                margin-right: 30px;
+            }
+        }
+        @media screen and  (orientation:portrait){
+            nav{
+                display: none;
+            }
+            button{
+                width: 50px;
+
+            }
+            header{
+                display: grid;
+                grid-template-columns: 6fr 6fr;
+            }
+            .brand-title{
+                grid-row: 1;
+                grid-column: 2;
+            }
+            button{
+                grid-row: 1;
+                grid-column: 1;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand-title">Shopper</div>
+        <nav>
+            <span>Home</span>
+            <span>Blog</span>
+            <span>Shop</span>
+            <span>Docs</span>
+        </nav>
+        <button class="bi bi-justify"></button>
+    </header>
+</body>
+</html>

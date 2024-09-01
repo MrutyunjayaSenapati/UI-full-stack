@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        .g {
+            background-color: gold;
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .s {
+            background-color: silver;
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .b {
+            background-color: burlywood;
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body class="container-fluid">
+    <table class="table table-hover table-striped table-dark table-bordered caption-top">
+        <caption>Olympics 2024 - Medals Tally</caption>
+        <colgroup span="2"></colgroup>
+        <thead  >
+            <tr>
+                <th width="30">Order</th>
+                <th width="300">NOCs</th>
+                <th> <span class="gold">G</span> </th>
+                <th> <span class="silver">S</span> </th>
+                <th> <span class="bronze">B</span> </th>
+                <th align="center"> <span class="g"></span> <span class="s"></span><span class="b"></span> </th>
+                <th> &nbsp; </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td align="left">
+                    <img src="../public/image/us.png" width="30"> <span class="country">United States of America</span>
+                </td>
+                <td>19</td>
+                <td>26</td>
+                <td>26</td>
+                <td>71</td>
+                <td> <span class="bi bi-plus-square"></span> </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td align="left">
+                    <img src="../public/image/ch.png" width="30"> <span class="country">People's Republic of China</span>
+                </td>
+                <td>19</td>
+                <td>15</td>
+                <td>11</td>
+                <td>45</td>
+                <td> <span class="bi bi-plus-square"></span> </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td align="left">
+                    <img src="../public/image/fr.png" width="30"> <span class="country">France</span>
+                </td>
+                <td>12</td>
+                <td>14</td>
+                <td>18</td>
+                <td>44</td>
+                <td> <span class="bi bi-plus-square"></span> </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr height="100" valign="center">
+                <td colspan="7">
+                    Last updated:August 5, 2024 at 09:44 (your local time)
+                    <br>
+                    Does not include medals won by AIN.
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
