@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Cube</title>
+  <style>
+    body{
+        background-color: black;
+        color: wheat;
+    }
+    .container{
+        height: 300px;
+        width: 300px;
+        /* border: solid thin lime; */
+        margin: 150px auto;
+        perspective: 600px;
+
+    }
+    .cube{
+        height: 300px;
+        width: 300px;
+        transform: translateZ(-150px) rotateX(30deg);
+        position: relative;
+        text-align: center;
+        transform-style: preserve-3d;
+        transition: 5s;
+        
+    }
+    .face{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+
+    }
+    .front{
+        background-color: yellow;
+        transform: rotateY(0deg) translateZ(150px);
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .right{
+        background: green;
+        transform: rotateY(90deg) translateZ(150px);
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .back{
+        background: white;
+        transform: rotateY(180deg) translateZ(150px);
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .left{
+        background: blue;
+        transform: rotateY(-90deg) translateZ(150px);
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .top{
+        background: orange;
+        transform: rotateX(90deg) translateZ(150px);
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        font-weight: bold;
+
+    }
+    .bottom{
+        background: red;
+        transform: rotateX(-90deg) translateZ(150px);
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .cube:hover{
+        transform: translateZ(-150px) rotateX(360deg) rotateY(30deg);
+
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cube">
+    <div class="face front">Front</div>       <div class="face right">Right</div>
+    <div class="face back">Back</div>
+    <div class="face left">Left</div>
+    <div class="face top">Top</div>
+    <div class="face bottom">Bottom</div>
+    </div>
+  </div>
+  
+</body>
+</html>

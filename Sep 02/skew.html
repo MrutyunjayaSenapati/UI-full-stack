@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skew</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        img {
+            transition: transform 0.3s ease-in-out;
+        }
+        .pic1:hover {
+            transform: skew(-10deg) translateX(20px);
+        }
+        .pic2:hover {
+            transform: skew(-20deg) translateX(40px);
+        }
+        .pic3:hover {
+            transform: skew(-20deg) translateX(60px);
+        }
+        .pic4:hover {
+            transform: skew(-20deg) translateX(100px);
+        }
+    </style>
+</head>
+<body>
+    <!--skew() it tilts element by specified angle
+    >it uses 'deg' as unit for angle. -->
+    <img class="pic1" src="../public/image/iphone.jpg" height="200" width="200" alt="Image 1">
+    <img class="pic2" src="../public/image/iphone.jpg" height="200" width="200" alt="Image 2">
+    <img class="pic3" src="../public/image/iphone.jpg" height="200" width="200" alt="Image 3">
+    <img class="pic4" src="../public/image/iphone.jpg" height="200" width="200" alt="Image 4">
+</body>
+</html>
