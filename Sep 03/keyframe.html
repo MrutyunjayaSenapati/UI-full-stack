@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframe</title>
+    <style>
+        @keyframes Carousel {
+            from{
+                transform: translateX(0);
+            }
+            /* 50%{
+                transform: translateX(0%);
+            } */
+            to{
+                transform: translateX(400px);
+            }
+            
+        }
+        img{
+            animation-name: Carousel;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction:alternate;
+        }
+    </style>
+</head>
+<body>
+    <img src="../public/image/BlueWorld.png" height="200"width="200" alt="">
+</body>
+</html>

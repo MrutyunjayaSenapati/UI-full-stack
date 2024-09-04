@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes Zoom {
+            from {
+                font-size: 5px;
+            }
+            to {
+                font-size: 60px;
+            }
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .title {
+            font-size: 30px;
+            display: flex;
+            justify-content: space-around;
+            width: 1000px;
+        }
+        .bi-heart-pulse {
+            font-size: 30px; /* Initial font size */
+            animation-name: Zoom;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <div>
+         <div class="title">
+            <div>M</div>
+            <div>E</div>
+            <div>D</div>
+            <div>I</div>
+            <div>C</div>
+            <div class="bi bi-heart-pulse"></div>
+            <div>V</div>
+            <div>E</div>
+            <div>R</div>
+         </div>
+    </div>
+</body>
+</html>
