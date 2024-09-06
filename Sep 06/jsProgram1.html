@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script>
+        function loadPage(){
+            window.document.images[0].src="../public/image/boy-book.jpg"
+            window.document.forms[0].elements[2].value="Login"
+            window.document.forms[1].elements[2].value="Submit"
+        }
+    </script>
+</head>
+<body onload="loadPage()">
+    <img src="" height="100"width="100">
+    <form action="">
+        <h3>Login</h3>
+        <input type="text" placeholder="Enter your ID"><br>
+        <input type="password" placeholder="Enter your password" ><br>
+        <input type="button">
+    </form><br>
+    <form action="">
+        <h4>BioData</h4>
+        <input type="text" placeholder="Enter your Full Name">
+        <input type="text" placeholder="Enter your Address">
+        <input type="button">
+    </form>
+
+</body>
+</html>

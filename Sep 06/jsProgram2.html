@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script>
+        function loadPage(){
+            poster.src="../public/image/boy-book.jpg"
+           frmLogin.btnLogin.value="Login"
+            frmBio.frmBtn.value="Submit"
+        }
+    </script>
+</head>
+<body onload="loadPage()">
+    <img src="" name="poster" height="100"width="100">
+    <form action="" name="frmLogin">
+        <h3>Login</h3>
+        <input type="text" placeholder="Enter your ID"><br>
+        <input type="password" placeholder="Enter your password" ><br>
+        <input type="button" name="btnLogin">
+    </form><br>
+    <form action="" name="frmBio">
+        <h4>BioData</h4>
+        <input type="text" placeholder="Enter your Full Name">
+        <input type="text" placeholder="Enter your Address">
+        <input name="frmBtn"type="button">
+    </form>
+
+</body>
+</html>
