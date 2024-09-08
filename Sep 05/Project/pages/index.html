@@ -4,26 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
     <style>
         .input-group {
             height: 50px;
             max-width: 30%; 
-            margin-right: ;
+            margin-right: 10px; /* Added a value here */
         }
         .input-group input {
             height: 100%; 
             border: solid 1px gray;
         }
-        
+        .card {
+            width: 100%; /* Allow card to take full width of column */
+        }
+        .oneCard:hover {
+            box-shadow: 5px 5px 15px lightblue;
+            transition: box-shadow 0.3s ease;
+        }
+        .carousel-indicators button {
+            width: 6px; 
+            height: 6px;
+        }
+        .sec3{
+            display: grid;
+            grid-template-columns: 10fr 2fr;
+            border: solid 1px black;
+        }
+        .subMinCard{
+            border: solid 1px red;
+        }
+        .stdDept{
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr 4fr;
+        }
+       
     </style>
 </head>
 <body class="container-fluid ">
     <header>
         <nav class="navbar navbar-expand-lg text-black bg-warning">
-            <div class="container-fluid ">
+            <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -35,11 +60,11 @@
                 </div> 
                 <div class="navbar-collapse collapse" id="menu">
                     <ul class="navbar-nav fs-5">
-                        <li class="nav-item"> <a class="nav-link fw-bold" href="#">Home</a></li>
-                        <li class="nav-item"> <a class="nav-link fw-bold" href="#">About</a></li>
-                        <li class="nav-item"> <a class="nav-link fw-bold" href="#">Service</a></li>
-                        <li class="nav-item"> <a class="nav-link fw-bold" href="#">Contact</a></li>
-                        <li class="nav-item"> 
+                        <li class="nav-item"><a class="nav-link fw-bold" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="#">Service</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="#">Contact</a></li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <button class="btn btn-primary">Log In</button>
                             </a>
@@ -49,41 +74,277 @@
             </div>
         </nav>
     </header>
+    
     <section>
-        <div class="carousel slide " data-bs-ride="carousel" id="banners" data-bs-theme="dark">
+        <div class="carousel slide" data-bs-ride="carousel" id="banners" data-bs-theme="dark">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="2000">
-                    <img height="400" src="../public/image/a1.jpg" class="w-100 d-block" alt="">
+                    <img height="400" src="../public/image/a1.jpg" class="w-100 d-block" alt="Banner Image 1">
                 </div>
                 <div class="carousel-item" data-bs-interval="5000">
-                    <img height="400" src="../public/image/a2.jpg" class="w-100 d-block"alt="">
+                    <img height="400" src="../public/image/a2.jpg" class="w-100 d-block" alt="Banner Image 2">
                 </div>
-                
                 <div class="carousel-item" data-bs-interval="2000">
-                    <img height="400" src="../public/image/a3.jpg" class="w-100 d-block" alt="">
+                    <img height="400" src="../public/image/a3.jpg" class="w-100 d-block" alt="Banner Image 3">
+                </div>
+            </div>
+        
+            <button data-bs-slide="prev" data-bs-target="#banners" class="carousel-control-prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+        
+            <button data-bs-slide="next" data-bs-target="#banners" class="carousel-control-next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        
+            <div class="carousel-indicators">
+                <button class="active" data-bs-slide-to="0" data-bs-target="#banners"></button>
+                <button data-bs-slide-to="1" data-bs-target="#banners"></button>
+                <button data-bs-slide-to="2" data-bs-target="#banners"></button>
+            </div>
+        </div>
+
+        <div class="container mt-1">
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card m-1 oneCard">
+                        <img src="../public/image/ui.png" class="card-img-top" alt="UI Fullstack">
+                        <div class="card-header">
+                            <h3 class="card-title text-center">UI Fullstack</h3>
+                        </div>
+                        <div class="card-body text-center">
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <div class="mt-2 bi bi-stopwatch">Duration: 4 Months</div>
+                            <div class="bi bi-stopwatch">Start Date:Sep 10,2024</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-warning w-100">Join</button>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-6 col-lg-4">
+                    <div class="card m-1 oneCard">
+                        <img src="../public/image/python.png" class="card-img-top" alt="UI Fullstack">
+                        <div class="card-header">
+                            <h3 class="card-title text-center">Python Fullstack</h3>
+                        </div>
+                        <div class="card-body text-center">
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <div class="mt-2 bi bi-stopwatch">Duration: 4 Months</div>
+                            <div class="bi bi-stopwatch">Start Date:Sep 10,2024</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-warning w-100">Join</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card m-1 oneCard">
+                        <img src="../public/image/java.png" class="card-img-top" alt="Java Fullstack">
+                        <div class="card-header">
+                            <h3 class="card-title text-center">Java Fullstack</h3>
+                        </div>
+                        <div class="card-body text-center">
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <div class="mt-2 bi bi-stopwatch">Duration: 4 Months</div>
+                            <div class="bi bi-stopwatch">Start Date:Sep 10,2024</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-warning w-100">Join</button>
+                        </div>
+                    </div>
+                </div>          
+            </div>
+        </div>
+        <div class="innerSec d-flex flex-column align-items-center mt-2">
+            <button class="bg-secondary text-light mb-2">Show me what's in this package</button>
+            <button class="bg-primary text-light mb-2">What is the package</button>
+            <p class="text-center">A package is a small container in which a quantity of something is sold. Packages are either small boxes made of thin cardboard, or bags or envelopes made of paper or plastic. ... When a product is packaged, it is put into containers to be sold.</p>
+        </div>
+        <div class="sec3">
+            <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-center">Department</th>
+                        <th class="text-center">Included</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><h4><center>M.Tech</center></h4></td>
+                        <td><center><span class="bi bi-check"></span></center></td>
+                    </tr>
+                    <tr>
+                        <td><h4><center>B.Tech</center></h4></td>
+                        <td><center><span class="bi bi-check"></span></center></td>
+                    </tr>
+                    <tr>
+                        <td><h4><center>MCA</center></h4></td>
+                        <td><center><span class="bi bi-check"></span></center></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            <div>
+                <img src="../public/image/a2.jpg" height="200" width="300" alt="">
+            </div>
+        </div>
+
+        <div class="job bg-primary-subtle mt-4">
+            <center class="fs-1">What is the Job</center>
+            <div class="row mt-1 ">
+                <div class="col-xs-12 col-sm-2">
+                    <span class="bi bi-keyboard fs-1" ></span>
+                    <h4>Types of Job</h4>
+                    <p>Volcanologist</p>
+                    <p>Quantum physicist</p>
+                    <p>Biomedical engineer</p>
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                    <span class="bi bi-file-word fs-1" ></span>
+                    <h4>Define job profile</h4>
+                    <p>Job profile developed by the personnel department of a business might include such things as job responsibilities, required qualifications, advancement prospects.</p>
+                   
+                </div>
+
+                <div class="col-xs-12 col-sm-2">
+                    <span class="bi bi-wordpress fs-1" ></span>
+                    <h4>Job profile summary</h4>
+                    <p>Profile summary is a summary of your education, skills, career experiences, and goals.</p>
+                   
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                    <span class="bi bi-motherboard fs-1" ></span>
+                    <h4>The IT skills</h4>
+                    <p>Coding</p>
+                    <p>Communication</p>
+                    <p>Networks</p>
+                    <p>Time Management</p>
+                    <p>More information Technology Skills</p>
+                   
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                    <span class="bi bi-laptop fs-1" ></span>
+                    <h4>Job profile summary</h4>
+                    <p>Profile summary is a summary of your education, skills, career experiences, and goals.</p>
+                   
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                    <span class="bi bi-wordpress fs-1" ></span>
+                    <h4>Person Skills</h4>
+                    <p>A skill is the ability to do something well, a certain competence or proficiency. Skills are typically acquired or developed through direct experiences and training, and they can require sustained effort.</p>
+                   
+                </div>
+                                
+            </div>
+        </div>
+        <div class="minCard d-grid">
+            <div class="mCard container">
+                
+                <div class="container">
+                    <div class="row subMinCard align-items-center mt-4 ">
+                        <div class="col-md-8 fs-5">
+                            <span class="fs-1"><span class="bi bi-1-circle text-warning "></span> Why do you want this Job?</span>
+                            <p >The hiring manager wants to: Learn about your career goals and how this position fits into your plan. Make sure that you are sincerely interested in the job and will be motivated to perform if hired. Find out what you know about the company, industry, position (and if you took the time to research).</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="../public/image/ind1.jpg" alt="Job" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="row subMinCard align-items-center mt-4 ">
+                        <div class="col-md-4">
+                            <img src="../public/image/ind2.png" alt="Job" class="img-fluid">
+                        </div>
+                        <div class="col-md-8 fs-5">
+                            <span class="fs-1"><span class="bi bi-2-circle text-danger "></span> What is a CV example?</span>
+                            <p >A resume is a brief summary. ... If you were writing your resume you would include only the work information that relates specifically to the job you're applying for, but for a Curriculum Vitae, you would also include all your teaching experience, lab and field work..</p>
+                        </div>
+                        
+                    </div>
+
+                    <div class="row subMinCard align-items-center mt-4">
+                        <div class="col-md-8 fs-5">
+                            <span class="fs-1"><span class="bi bi-3-circle text-warning "></span>  Do you need a resume for your first job?</span>
+                            <p >When writing your first resume with no work experience, it's appropriate to include casual jobs like babysitting, pet sitting, lawn mowing, and shoveling snow. All experience counts and the way you present yourself, your skills, and your assets to a hiring manager begins with a strong resume.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="../public/image/ind3.png" alt="Job" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="row subMinCard align-items-center mt-4 ">
+                        <div class="col-md-4">
+                            <img src="../public/image/ind4.jpg" alt="Job" class="img-fluid">
+                        </div>
+                        <div class="col-md-8 fs-5">
+                            <span class="fs-1"><span class="bi bi-4-circle text-danger "></span> Why do you think you can do well in this job?</span>
+                            <p >I believe I will do well in this job because I have the relevant skills and it is my field of interest. ... I have a confident that I can do well in the job because of self confidence, positive attitude. Previous success also brings self confidence for the future success.</p>
+                        </div>
+                        
+                    </div>
                 </div>
                 
             </div>
-        
-        <button data-bs-slide="prev" data-bs-target="#banners" class="carousel-control-prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        
-        <button data-bs-slide="next" data-bs-target="#banners" class="carousel-control-next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
-        
-        <div class="carousel-indicators">
-            <button class="active btn btn-primary   rounded-circle p-1" data-bs-slide-to="0" data-bs-target="#banners" style="width: 6px; height: 6px;"></button>
-        
-            <button data-bs-slide-to="1" data-bs-target="#banners" class=" btn btn-primary  rounded-circle p-1"  style="width: 6px; height: 6px;"></button>
-        
-            <button data-bs-slide-to="2" data-bs-target="#banners" class=" btn  btn-primary rounded-circle p-1" style="width: 6px; height: 6px;"></button>
-          
-        
         </div>
-        
+
+        <div class=" d-flex justify-content-center">
+            <span><button class="bg-primary-subtle text-black">Request call back</button><button class="bg-warning m-1">FAQ'S</button></span>
+        </div>
+
+        <div class=" mt-4 bg-warning-subtle justify-content-center align-items-center">
+            <div class="d-flex justify-content-center bg-warning-subtle mb-4">Student Department Details</div>
+            <div class="stdDept">
+                <div>
+                <span class="bi bi-hourglass-split fs-4"></span><br>
+                <p>Average Salary Offered</p>
+                <h3>INR 7L per annum</h3>
+                </div>
+
+                <div>
+                    <span class="bi bi-arrow-repeat fs-4"></span><br>
+                    <p>Duration</p>
+                    <h3>2</h3>
+                    <p>Years</p>
+
+                </div>
+
+                <div>
+                    <span class="bi bi-hand-thumbs-up fs-4"></span><br>
+                    <p>Average Fees Incurred</p>
+                    <h3>INR 25,000-2L</h3>
+                    <p>per annum</p>
+                </div>
+                <div>
+                    <span class="bi bi-flag fs-4"></span>
+                    <p>Indian Institute of Technology,[IIT] Kanpur</p>
+                    <h3>49,035</h3>
+                    <p>Kanpur</p>
+                </div>
+
             </div>
+
+        </div>
+
+
     </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
