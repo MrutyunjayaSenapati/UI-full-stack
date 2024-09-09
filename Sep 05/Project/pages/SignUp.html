@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Personal Information</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 10px;
+        }
+
+        form {
+            background-color: white;
+            padding: 100px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px black;
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        legend {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: darkgreen;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        label {
+            font-size: 20px;
+            color: brown;
+            margin-bottom: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        #btnn {
+            width: 100%;
+            padding: 15px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        #btnn:hover {
+            background-color: darkgreen;
+        }
+
+        #footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .subFoot {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg text-black bg-warning">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div><a href="../pages/index.html"><img src="../public/image/naresh-it-logo2.png" height="90" width="150" alt="Naresh IT Logo"></a></div>
+                <div class="input-group ms-2 me-3"> 
+                    <input type="text" class="form-control" placeholder="Search">
+                    <button class="bi bi-search btn btn-secondary"></button>
+                </div> 
+                <div class="navbar-collapse collapse" id="menu">
+                    <ul class="navbar-nav fs-5">
+                        <li class="nav-item"><a class="nav-link fw-bold" href="../pages/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="../pages/about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="../pages/service.html">Service</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="../pages/contact.html">Contact</a></li>
+                        <li class="nav-item">
+                            <div class="dropdown w-25">
+                                <button data-bs-toggle="dropdown" class="dropdown-toggle btn btn-primary"> <span class="bi  bi-person-fill"></span> Sign In</button>
+                                <ul class="dropdown-menu" data-bs-theme="dark">
+                                    <li><a class="dropdown-item" href="../pages/SignIn.html"  ><span class="dropdown-item-text"><span class="bi bi-person-fill "> Sign In</span></span></a></li>
+                        
+                                    <li><a class="dropdown-item" href="../pages/SignUp.html"  ><span class="dropdown-item-text"><span class="bi bi-person-plus "> Sign Up</span></span></a></li>
+                        
+                                    <li><a class="dropdown-item" href="../pages/ChangePwd.html"  ><span class="dropdown-item-text"><span class="bi bi-key "> Change Password</span></span></a></li>
+                        
+                                   
+                        
+                                   
+                                </ul>
+                               
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="mt-2">
+        <form method="get">
+            <fieldset>
+                <legend>Registration Form
+                </legend>
+
+                <label for="name">Enter Your Name</label>
+                <input type="text" id="name" name="user" placeholder="Fullname" required autofocus>
+
+                <label for="email">Enter Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+
+                <label for="password">Enter Your Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" required maxlength="16" minlength="6">
+
+                <label for="confirm_password">Confirm Your Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Password" required maxlength="16" minlength="6">
+
+                <label>Choose Your Gender</label>
+                <div class="radio-group">
+                    <label><input type="radio" id="male" name="gender" value="male" required> Male</label>
+                    <label><input type="radio" id="female" name="gender" value="female" required> Female</label>
+                    <label><input type="radio" id="other" name="gender" value="other" required> Other</label>
+                </div>
+
+                <label for="dob">Enter Your Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country" list="countries" placeholder="Your country" required>
+                <datalist id="countries">
+                    <option value="India"></option>
+                    <option value="Australia"></option>
+                    <option value="America"></option>
+                    <option value="China"></option>
+                    <option value="Pakistan"></option>
+                </datalist>
+
+                <button type="submit" id="btnn">Submit</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <div class="container-fluid bg-dark text-white footer mt-4">
+        <div class="row">
+            <center><strong>Naresh Technologies</strong></center>
+        </div>
+        <br>
+        <div class="row" id="footer">
+            <div class="col-xs-12 col-sm-3">
+                <ul>
+                    <li><a class="text-decoration-none text-reset" href="https://www.facebook.com/nareshit/" target="_blank"><i class="bi bi-facebook"></i> Facebook</a></li>
+                    <li><a class="text-decoration-none text-reset" href="https://nareshit.in/course-schedule/" target="_blank"><i class="bi bi-envelope"></i> Google</a></li>
+                    <li><a class="text-decoration-none text-reset" href="https://twitter.com/nareshitech?lang=en" target="_blank"><i class="bi bi-twitter"></i> Twitter</a></li>
+                    <li><a class="text-decoration-none text-reset" href="https://www.youtube.com/user/nareshtechnologies" target="_blank"><i class="bi bi-youtube"></i> YouTube</a></li>
+                </ul>
+            </div>
+    
+            <div class="col-xs-12 col-sm-3">
+                <ul>
+                    <li><a class="text-decoration-none text-reset" href="../pages/index.html">Home</a></li>
+                    <li><a class="text-decoration-none text-reset" href="../pages/about.html">About</a></li>
+                    <li><a class="text-decoration-none text-reset" href="../pages/service.html">Service</a></li>
+                    <li><a class="text-decoration-none text-reset" href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="col-xs-12">
+                <ul>
+                    <li><strong>Name:</strong> Naresh Institute</li>
+                    <li><strong>Email:</strong> info@nareshit.com</li>
+                    <li><strong>Contact:</strong> +91-xxxxxxxxxx</li>
+                    <li><strong>Address:</strong> Sr nagar, Hyderabad, Telangana, India</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
