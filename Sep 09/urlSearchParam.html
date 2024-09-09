@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyload(){
+            const urlParams = new URLSearchParams(window.location.search);
+            const value = urlParams.get('msg'); // 'msg' is the key in the query string
+
+            if (value) {
+                document.getElementById("msg").innerHTML = value;
+            } else {
+                document.getElementById("msg").innerHTML = "No message provided";
+            }
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <p>Hello! <span id="msg"></span></p>
+</body>
+</html>

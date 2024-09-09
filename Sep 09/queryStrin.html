@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyLoad(){
+            queryString=location.search;
+            equalPosition=location.search.indexOf("=");
+            value=queryString.slice(equalPosition+1);
+            document.getElementById("msg").innerHTML=value;
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <p>Hello! <span id="msg"></span></p>
+    
+</body>
+</html>
