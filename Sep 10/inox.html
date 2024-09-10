@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script> 
+    <script>
+        function bookClick(){
+            // Make sure these elements exist
+            var summaryContainer = document.getElementById("summaryContainer");
+            var btnBooking = document.getElementById("btnBooking");
+
+            // Ensure both elements exist before manipulating them
+            if (summaryContainer && btnBooking) {
+                summaryContainer.style.display = "block";
+                btnBooking.style.display = "none";
+            }
+
+            // Get movie details
+            var movieName = document.getElementById("lstMovie").value;
+            document.getElementById("lblMovie").innerText = movieName;
+
+            // Set the poster based on the selected movie
+            if(movieName == "Stree 2"){
+                document.getElementById("imgPoster").src = "../public/image/stree2.jpg";
+            }
+            else if(movieName == "Vedaa"){
+                document.getElementById("imgPoster").src = "../public/image/vedaa.avif";
+            }
+            else if(movieName == "Tumbad"){
+                document.getElementById("imgPoster").src = "../public/image/tumbad.avif";
+            }
+            else if(movieName == "Alien Romulus"){
+                document.getElementById("imgPoster").src = "../public/image/alienR.jpg";
+            }
+
+            // Set the rest of the details
+            document.getElementById("lblDate").innerText = document.getElementById("lstDate").value;
+            document.getElementById("lblCinema").innerText = document.getElementById("lstCinema").value;
+            document.getElementById("lblTime").innerText = document.getElementById("lstTime").value;
+        }
+
+        function ModifyClick(){
+            document.getElementById("lblBooking").innerHTML = "Modify Booking";
+            document.getElementById("btnBook").innerHTML = "Save";
+            document.getElementById("btnBook").className = "btn btn-success";
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <!-- Add id="btnBooking" to this button -->
+    <button class="btn btn-primary mt-2" id="btnBooking" data-bs-toggle="modal" data-bs-target="#booking">Quick Booking</button>
+
+    <div class="modal fade" id="booking">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <!-- modal header -->
+                <div class="modal-header">
+                    <h2 id="lblBooking">Quick Booking</h2>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- modal body -->
+                <div class="modal-body">
+                    <nav class="d-flex justify-content-between">
+                        <div>
+                            <select class="form-select" id="lstMovie">
+                                <option value="">Select Movie</option>
+                                <option value="Stree 2">Stree 2</option>
+                                <option value="Vedaa">Vedaa</option>
+                                <option value="Tumbad">Tumbad</option>
+                                <option value="Alien Romulus">Alien Romulus</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <select class="form-select" id="lstDate">
+                                <option value="">Select Date</option>
+                                <option value="Today 10 Sep">Today 10 Sep</option>
+                                <option value="Tomorrow 11 Sep">Tomorrow 11 Sep</option>
+                                <option value="13 Sep">13 Sep</option>
+                                <option value="14 Sep">14 Sep</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <select class="form-select" id="lstCinema">
+                                <option value="">Select Cinema</option>
+                                <option value="INOX BBSR">INOX BBSR</option>
+                                <option value="Cinepolis BBSR">Cinepolis BBSR</option>
+                                <option value="Maharaja BBSR">Maharaja BBSR</option>
+                                <option value="INOX CTC">INOX CTC</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <select class="form-select" id="lstTime">
+                                <option value="">Select Time</option>
+                                <option value="8:00 AM">8:00 AM</option>
+                                <option value="10:00 AM">10:00 AM</option>
+                                <option value="12:00 PM">12:00 PM</option>
+                                <option value="7:00 PM">7:00 PM</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button class="btn btn-secondary" id="btnBook" onclick="bookClick()" data-bs-dismiss="modal">Book</button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4 mx-auto" id="summaryContainer" style="display: none; height: 50%; width: 50%;" >
+        <dl>
+            <h4 class="bg-dark text-white p-2 bi bi-ticket">Booking Summary</h4>
+            <img width="100%" height="300" id="imgPoster">
+            <dl class="row">
+                <dt class="col-3">Movie</dt>
+                <dd class="col-9" id="lblMovie"></dd>
+                <dt class="col-3">Date</dt>
+                <dd class="col-9" id="lblDate"></dd>
+                <dt class="col-3">Cinema</dt>
+                <dd class="col-9" id="lblCinema"></dd>
+                <dt class="col-3">Time</dt>
+                <dd class="col-9" id="lblTime"></dd>
+            </dl>
+        </dl>
+        <button onclick="ModifyClick()" data-bs-target="#booking" data-bs-toggle="modal" class="btn btn-warning w-100 bi bi-pen-fill">Modify Booking</button>
+    </div>
+</body>
+</html>
