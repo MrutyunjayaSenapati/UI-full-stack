@@ -1,0 +1,26 @@
+<script>
+    let a= 2e3;
+    document.write("Exponent: "+a+"<br>");
+    let b= 0o756;
+    document.write("Octal: "+b+"<br>");
+    let c=699929292n;
+    document.write("BigInt"+c+"<br>");
+
+    let x=5000.00;   
+    document.write("Float:"+x.toFixed(2)+"<br>");
+
+    let price=500000;
+    document.write("price: "+ price.toLocaleString('en-in', { style:"currency", currency:"INR" })+"<br>");
+    //
+    let z='123';
+    document.write(parseInt(z)+"<br>");
+    // parse float
+    let f=34.23;
+    let q="b";
+    document.write("parse float"+parseInt(q)+"<br>");
+    // typeOf
+    let Type=NaN;
+    document.write(typeof(Type));
+
+
+</script>

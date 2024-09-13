@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function calculateEMI() {
+            let P = parseFloat(document.getElementById("LA").value);
+            let r = parseFloat(document.getElementById("IR").value);
+            let n = parseFloat(document.getElementById("LT").value);
+            let N = n * 12;
+            let R = r / 12 / 100;
+            let EMI = (P * R * Math.pow((1 + R), N)) / (Math.pow((1 + R), N) - 1);
+
+            document.getElementById("modalResult").innerHTML = "Your EMI is: ₹ " + EMI.toFixed(2);
+            var myModal = new bootstrap.Modal(document.getElementById('resultModal'));
+            myModal.show();
+        }
+    </script>
+</head>
+<body class="container-fluid bg-body-secondary ">
+    <div class="container mt-5 p-1 w-75 bg-danger-subtle">
+        <h3 class="text-center mb-4">EMI Calculator</h3>
+        <form>
+            <div class="row mb-3">
+                <label for="LA" class="col-sm-4 col-form-label">Loan Amount (₹)</label>
+                <div class="col-sm-8">
+                    <input type="number" class="form-control" id="LA" placeholder="Enter Loan Amount">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="IR" class="col-sm-4 col-form-label">Interest Rate (%)</label>
+                <div class="col-sm-8">
+                    <input type="number" class="form-control" id="IR" placeholder="Enter Interest Rate">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="LT" class="col-sm-4 col-form-label">Loan Term (Years)</label>
+                <div class="col-sm-8">
+                    <input type="number" class="form-control" id="LT" placeholder="Enter Loan Term">
+                </div>
+            </div>
+           
+            </div>
+            <div class="text-center">
+                <button type="button" class="btn btn-primary" onclick="calculateEMI()">Calculate EMI</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resultModalLabel">EMI Calculation Result</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalResult"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
