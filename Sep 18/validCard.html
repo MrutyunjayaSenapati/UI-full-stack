@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check card</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+<script>
+    function verifyNumber(){
+      let card= document.getElementById("inNumber").value;
+      if(card==="1234"){
+        document.getElementById("inCvv").disabled=false;
+      }
+    }
+    function verifyCvv(){
+        let cvv=document.getElementById("inCvv").value;
+        if(cvv==="4568"){
+            document.getElementById("inExpiry").disabled=false;
+        }
+      }
+      function verifyExpiry(){
+        let exp=document.getElementById("inExpiry").value;
+        if(exp ==="2026"){
+            document.getElementById ("payBtn").disabled = false;
+        }
+      }
+</script>
+</head>
+<body class="container-fluid">
+    <div>
+        <dl>
+            <dt>Card</dt>
+            <dd><input type="number" id="inNumber" onblur="verifyNumber()"></dd>
+            <dt>Cvv</dt>
+            <dd><input type="number" onblur="verifyCvv()"disabled   id="inCvv"></dd>
+            <dt>Expiry</dt>
+            <dd><select name="Select Expiry" onchange="verifyExpiry()" id="inExpiry" disabled>
+                <option value=""> Select Expiry</option>
+                <option value="2025"> 2025</option>
+                <option value="2026"> 2026</option>
+            </select></dd>
+        </dl>
+        <button disabled  id="payBtn">pay</button>
+    </div>
+    
+</body>
+</html>

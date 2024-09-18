@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function VerifyCard(){
+            var card = document.getElementById("txtCard").value;
+            var imgCard = document.getElementById("imgCard");
+            if(card.startsWith("4455")) {
+                imgCard.src = "../public/image/master.svg";
+            } else {
+                imgCard.src = "../public/image/visa.png";
+            }
+        }
+        function VerifySkype(){
+            var skype  = document.getElementById("txtSkype").value;
+            var lblSkype = document.getElementById("lblSkype");
+
+            if(skype.endsWith("outlook.com")){
+                lblSkype.innerHTML = "";
+            } else {
+                lblSkype.innerHTML ="Invalid Skype Id".fontcolor('red');
+            }
+
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <dl class="mt-4 w-25">
+        <dt>Credit Card Number</dt>
+        <dd class="input-group">
+            <input type="text" id="txtCard" onblur="VerifyCard()" maxlength="16" class="form-control">
+            <img id="imgCard" class="input-group-text" width="80" height="40">
+        </dd>
+        <dt>Your Skype Id</dt>
+        <dd><input type="text" onblur="VerifySkype()" id="txtSkype" class="form-control"></dd>
+        <dd id="lblSkype"></dd>
+    </dl>
+</body>
+</html>

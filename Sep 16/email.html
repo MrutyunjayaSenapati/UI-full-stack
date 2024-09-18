@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         function VerifyCode(){
+             var txtCode = document.getElementById("txtCode").value;
+             var lblError = document.getElementById("lblError");
+
+             if(txtCode.charAt(0)=="S") {
+                lblError.innerHTML = "";
+             } else {
+                lblError.innerHTML = "Code must start with S character".fontcolor('red');
+             }
+        }
+        function VerifyName(){
+            var userName = document.getElementById("txtName").value;
+            var firstCharCode = userName.charCodeAt(0);
+            var lblName = document.getElementById("lblName");
+
+            console.log(userName.charCodeAt(0));
+
+            if(firstCharCode>=65 && firstCharCode<=90) {
+                lblName.innerHTML = "";
+            } else {
+                lblName.innerHTML = "Name must start with uppercase letter".fontcolor('red');
+            }
+           
+        }
+        function VerifyEmail(){
+            var email = document.getElementById("txtEmail").value;
+            var lblEmail = document.getElementById("lblEmail");
+            var atPos = email.indexOf("@");
+            var dotPos = email.lastIndexOf(".");
+
+            if(atPos<3 || (dotPos-atPos)<3){
+                lblEmail.innerHTML = "Invalid Email".fontcolor('red');
+            } else {
+                lblEmail.innerHTML = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input type="text" onblur="VerifyName()" placeholder="Start with Uppercase letter" id="txtName"></dd>
+        <dd id="lblName"></dd>
+        <dt>IFSC Code</dt>
+        <dd><input type="text" onblur="VerifyCode()" id="txtCode"></dd>
+        <dd id="lblError"></dd>
+        <dt>Email</dt>
+        <dd><input type="text" onblur="VerifyEmail()" id="txtEmail"></dd>
+        <dd id="lblEmail"></dd>
+    </dl>
+</body>
+</html>

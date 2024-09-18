@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function applyStyle(){
+           let fontSize =document.getElementById("fontSize").value;
+
+           let fontStyle= document.getElementById("lstStyle").value;
+
+           let fontColor= document.getElementById("fontColor").value;
+           let root=document.getElementById("root");
+           root.style.fontSize = fontSize+"px";
+           root.style.color=fontColor;
+
+           if(fontStyle==="bold"){
+            root.style.fontWeight="bold";
+            root.style.fontStyle="normal";
+           }
+           else if(fontStyle=="italic"){
+            root.style.fontWeight="normal";
+            root.style.fontStyle="italic";
+           }
+
+           
+        }
+    </script>
+
+</head>
+<body>
+    <dl>
+        <dt>Font Size</dt>
+        <dd><input type="number" id="fontSize"></dd>
+        <dt>Font Color</dt>
+        <dd><input type="color" id="fontColor" ></dd>
+        <dt>Font Style</dt>
+        <dd><select name="" id="lstStyle">
+            <option value="">select style </option>
+            <option value="bold">bold</option>
+            <option value="italic">italic</option>
+            
+        </select></dd>
+    </dl>
+    <button onclick="applyStyle()">Apply Style</button>
+    <div id="root">Mrutyunjaya Senpati</div>
+    
+</body>
+</html>
