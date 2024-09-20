@@ -1,0 +1,14 @@
+<script>
+    function findrange(value ,max,min){
+        if(value<max && value>min){
+            document.write(`${value} is greater than ${min} and less than ${max}`);
+        }
+        else{
+            document.write(`${value} is not in range`);
+        }
+    }
+    let value=prompt("Enter a Number");
+    let max=prompt("Enter max vaue");
+    let min=prompt("Enter min value");
+    findrange(value,max,min);
+</script>

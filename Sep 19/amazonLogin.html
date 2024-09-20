@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        let flag="";
+        function ContinueClick(){
+            let inputTxt=document.getElementById("inputTxt").value;
+            let msg=document.getElementById("msgTxt");
+            let userIdContainer=document.getElementById("userIdContainer");
+            let pwdContainer=document.getElementById("pwdContainer");
+
+
+
+            if(inputTxt==="john123@gmail.com"){
+                flag=`Login success with your email ${inputTxt} OTP sent to mail`;
+                document.getElementById("userIdContainer").style.display="none";
+                pwdContainer.style.display="block";
+            }
+            else if(inputTxt==="+919876543210"){
+                flag=`Login success with your mobile ${inputTxt} OTP sent to mail`;
+                userIdContainer.style.display="none";
+                pwdContainer.style.display="block";
+                
+            }
+            else{
+                msg.innerHTML=`${inputTxt} doesn't exist`;
+            }
+
+        }
+        function LoginClick(){
+            let pwd=document.getElementById("txtPwd").value;
+            if(pwd=="john@123"){
+                document.write(`<h1>${flag} </h1>`)
+            }
+            else{
+                document.getElementById("resPwd").innerHTML="invalid Password".fontcolor("red");
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <div class="container mt-4 ">
+        
+        <div id="userIdContainer" style="display: block;">
+            <h3>SignIn</h3>
+            <dl>
+                <dt>Email or mobile phone Num</dt>
+                <dd><input type="text" id="inputTxt"></dd>
+                <dd id="msgTxt"></dd>
+                <button onclick="ContinueClick()">Continue</button>
+            </dl>
+        </div>
+        
+        <div id="pwdContainer" style="display: none;">
+           <dl>
+            <dt>Your password</dt>
+            <dd><input type="password"id="txtPwd"></dd>
+            <dd id="resPwd" ></dd>
+           </dl>
+           <button onclick="LoginClick()" >Login</button>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
