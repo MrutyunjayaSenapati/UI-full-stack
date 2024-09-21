@@ -1,0 +1,15 @@
+<script>
+    function findTrinangleType(x,y,z){
+        if(x===y && y===z ){
+            document.write("Equilateral Triangle");
+        }
+        else if(x===y || y===z || z===x){
+            document.write("isosceles Triangle");
+        }
+        else{
+            document.write("Scalene Trinagle");
+        }
+    }
+
+    findTrinangleType(5,3,3)
+</script>

@@ -1,0 +1,33 @@
+<script>
+    function vowel(char){
+        // switch(char){
+        //     case "a":
+        //         document.write(`${char} is vowel`);
+        //         break;
+        //     case "e":
+        //         document.write(`${char} is vowel`);
+        //         break
+        //     case "i":
+        //         document.write(`${char} is vowel`);
+        //         break
+        //     case "o":
+        //         document.write(`${char} is vowel`);
+        //         break
+        //     case "u":
+        //         document.write(`${char} is vowel`);
+        //         break
+        //     default:
+        //         document.write(`${char} is consonant`);    
+        // }
+
+
+        var regExp=/[a,e,i,o,u]/;
+        if(char.match(regExp)){
+            document.write(`  ${char} is an vowel`);
+        }
+        else{
+            document.write(` ${char} is a consonant`);
+        }
+    }
+    vowel("a");
+</script>
