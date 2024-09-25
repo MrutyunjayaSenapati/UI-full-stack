@@ -1,0 +1,38 @@
+<script>
+    // length
+    var values=[12,22,44];
+    console.log(values.length)
+
+    // Array Destructure
+    let [a,b,c]=values;
+    console.log(a)
+    // without destructure
+    let d=values[2];
+    console.log(d);
+
+    // Array spread operator
+    var col1=[10,20,30];
+    var col2=[col1];
+    console.log(col2);
+    console.log(...col2)
+
+    // toString()
+    let item=["Hello","world"];
+    console.log(item.toString())
+
+    // join
+    console.log(item.join(">"));
+    // forEach
+    let items=["Home", "Electronics", "Mobiles", "Apple Phones", "iPhone 15"];
+    items.forEach(function(item,index)
+    {
+        console.log(`${index} = ${item}`);
+    })
+// map
+items.map(function(item,index){
+    console.log(`${index} map ${item}`);
+})
+
+
+
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function GenerateClick(){
+         let ol=document.createElement("ol");
+         let li1=document.createElement("li");
+         let li2=document.createElement("li");
+         li1.innerHTML="HTML";
+         li2.innerHTML="Js";
+
+         ol.appendChild(li1);
+         ol.appendChild(li2);
+         document.getElementById("container").appendChild(ol);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="GenerateClick()">Generate</button>
+    <div id="container">
+
+    </div>
+</body>
+</html>

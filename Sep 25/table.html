@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <script>
+        function GenerateClick(){
+            let table=document.createElement("table");
+            table.border="1";
+
+            let thead=document.createElement("thead");
+            let tbody=document.createElement("tbody");
+            
+            let tr_head=document.createElement("tr");
+            let tr_body=document.createElement("tr");
+
+
+            let th=document.createElement("th");
+            th.innerHTML="Name";
+            let td=document.createElement("td");
+            td.innerHTML="Samsung";
+
+
+            tr_head.appendChild(th);
+            tr_body.appendChild(td);
+
+            thead.appendChild(tr_head);
+            tbody.appendChild(tr_body);
+
+            table.appendChild(thead);
+            table.appendChild(tbody);
+            document.getElementById("container").appendChild(table);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="GenerateClick()">Generate click</button>
+    <div id="container">
+
+    </div>
+    
+</body>
+</html>

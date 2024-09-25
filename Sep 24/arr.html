@@ -1,0 +1,19 @@
+<script>
+    // static memory allocation
+    var value=[1,2,3,4,5];
+    document.write(value)
+
+    //dynamic memory allocation
+    let values=new Array();
+    values.push(10);
+    values.push(20);
+    console.log(values);
+
+    //Anonymous function
+    var val=[function(){console.log("Wellcome")}];
+    val[0]();
+
+
+    var items=[10,"TV",true,["Delhi","HYD"],function(){console.log("Hello! function")}]
+    console.log("Hyderabar:"+items[3][1]);
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kid fashion</title>
+    <script>
+        function UploadClick(){
+            let pic=document.createElement("img");
+            pic.src="../public/image/kid.jpg";
+            pic.width="200";
+            pic.height="200";
+            document.querySelector("figure").appendChild(pic);
+        }
+        function bodyload(){
+            let h1=document.createElement("h1");
+            h1.innerHTML="Dynamic Elements";
+            document.querySelector("body").appendChild(h1);
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <button onclick="UploadClick()">upload</button>
+    <figure>
+
+    </figure>
+    
+</body>
+</html>
