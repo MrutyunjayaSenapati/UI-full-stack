@@ -1,0 +1,47 @@
+<script>
+    // Object Manipulation
+    let product={
+        id:1,
+        Name:"Samsung TV",
+        Price:34000.44,
+        Stock:true
+    }
+        // for in
+// for(let key in product){
+//     console.log(`${key} ==${product[key]}`);
+// }
+// remove key in object
+// delete product.Name;
+// console.log(product.id);
+// product.Name="onePlus TV";
+// console.log(product.Name);
+// Object.keys(product).map(function(key){
+//          document.write(`${key} : ${product[key]}<br>`);
+//     })
+
+    // if("Rating" in product) {
+    //     document.write(`Rating : ${product.Rating} <br>`);
+    // } else {
+    //     document.write("<code> Product Rating is not available </code><br>");
+    // }
+
+
+    // data type of value
+    // Object.keys(product).map(function(key){
+    //     console.log(`${key}:${[typeof product[key]]}`)
+    // })
+
+    // Hide any key in object
+    let id=Symbol();
+    let phone={
+        [id]:123,
+        Name:"iphone",
+        price:54000,
+        Stock:true,
+    }
+    Object.keys(phone).map(function(key){
+        document.write(`${key}:${phone[key]}<br>`);
+    })
+
+document.write(`Phone id ${phone[id]}`);
+</script>
