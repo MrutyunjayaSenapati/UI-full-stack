@@ -1,0 +1,19 @@
+<script>
+   let collection = [40000, 24500, 67000, 26700, 74000];
+
+let filterResult = collection.filter(function(value){
+   return value>50000;
+});
+
+let findResult=collection.find(function(value){
+    return value>50000;
+})
+
+let indexOfResult=collection.indexOf(40000);
+
+console.log(indexOfResult)
+console.log("find Result"+findResult);
+console.log("fillter result"+filterResult);
+
+
+</script>
