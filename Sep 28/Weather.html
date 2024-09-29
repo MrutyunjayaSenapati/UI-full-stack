@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        const apikey="XXXXX";
+        const Url="https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+function WeatherData(){
+    document.querySelector("tbody").innerHTML=" ";
+    let city=document.getElementById("inputId").value;
+    apiUrl=Url+city+`&appid=${apikey}`;
+    let weatherObj=[];
+    let http= new XMLHttpRequest();
+    http.open("get",apiUrl,true);
+    http.send();
+    http.onreadystatechange=function(){
+        if(http.readyState===4 ){
+            weatherObj=JSON.parse(http.responseText);
+            
+                let tr=document.createElement("tr");
+                let tdName=document.createElement("td");
+                let tdTemp=document.createElement("td");
+                let tdPressure=document.createElement("td");
+                let tdHumidity=document.createElement("td");
+                let tdWind=document.createElement("td");
+                tdName.innerHTML=weatherObj.name;
+                tdTemp.innerHTML=weatherObj.main.temp+"°C";
+                tdPressure.innerHTML=weatherObj.main.pressure+" hPa";
+                tdHumidity.innerHTML=weatherObj.main.humidity+"%";
+                tdWind.innerHTML=weatherObj.wind.speed+"m/s";
+
+
+
+                tr.appendChild(tdName);
+                tr.appendChild(tdTemp);
+                tr.appendChild(tdPressure);
+                tr.appendChild(tdHumidity);
+                tr.appendChild(tdWind);
+                document.querySelector("tbody").appendChild(tr);
+
+            }
+        }
+    }
+
+
+
+    </script>
+</head>
+<body class="container-fluid p-4 bg-black">
+    <div class=" bg-light d-flex justify-content-center align-items-center">
+        <div>
+        <h3>Weather Web</h3>
+        <div class="input-group">
+        <input type="text" id="inputId" placeholder="Enter City" class="form-control">
+        <button class="bi bi-search" type="submit" onclick="WeatherData()">Search</button>
+        </div>
+        <div id="result">
+            <table class=" table table-hover">
+                <thead>
+                <tr>
+                    <th>City name</th>
+                    <th>Temp</th>
+                    <th>pressure</th>
+                    <th>Humidity</th>
+                    <th>Wind Speed</th>
+                </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+
+        </div>
+
+        </div>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: #343a40;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    min-height: 100vh;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#inputId {
+    font-size: 1.2rem;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.bi-search {
+    font-size: 1.5rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.bi-search:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    color: #212529;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #007bff;
+    color: white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e9ecef;
+}
+
+tbody tr:hover {
+    background-color: #adb5bd;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .bg-light {
+        padding: 20px;
+    }
+
+    #inputId {
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+}

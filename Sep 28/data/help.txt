@@ -1,0 +1,4 @@
+- AJAX enables partial postback.
+- It allows to add new content into page without reloading the page.
+- It can submit only specific portion of page.
+- JavaScript provides the actions for AJAX.
