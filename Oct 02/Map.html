@@ -1,0 +1,19 @@
+<script>
+    let data=new Map();
+    data.set("HTML","it is a markup language");
+    data.set(1,{Name:"Samsung TV",Price:5000});
+    data.set("Cities",["Delhi","HYD"]);
+    Object.keys(data.get(1)).map(function(item){
+        console.log(item+"====>"+data.get(1)[item]);
+    })
+
+    data.get("Cities").map(function(item,index){
+        console.log(index+"===>"+item);
+    })
+    console.log(data.size);
+    console.log(data.values());
+    for(let item of data.entries()){
+        console.log(item);
+    }
+    console.log()
+</script>

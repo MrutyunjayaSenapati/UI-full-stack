@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <script>
+        function bodyload(){
+            let now=new Date();
+            // now.setHours(20);
+            let hrs=now.getHours();
+            let lblTitle=document.getElementById("lblTitle");
+            let pic=document.getElementById("pic");
+            lblTitle.innerHTML=prompt("Enter Your Name");
+            if(hrs>=0 && hrs<=12){
+                pic.src="../public/image/ind.png";
+            }
+            else if(hrs>12 && hrs<=16){
+                pic.src="../public/image/eng.png";
+            }
+            else{
+                pic.src="../public/image/BlueWorld.png";
+            }
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div align="center">
+        <h2 id="lblTitle"></h2>
+        <img width="100" height="100" id="pic" src="" alt="">
+    </div>
+    
+</body>
+</html>
