@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shift Image</title>
+    <script>
+        let xPosition=10;
+        function MoveClick(){
+            xPosition*=10;
+            document.getElementById("img").style.marginLeft=xPosition+"px";
+            
+        }
+    </script>
+</head>
+<body>
+    <button onclick="MoveClick()">Move Right</button>
+    <br>
+    <img id="img" src="../public/image/BlueWorld.png" width="100" height="100" alt="">
+</body>
+</html>
