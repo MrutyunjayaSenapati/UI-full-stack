@@ -1,0 +1,38 @@
+<script>
+    let arr=[1,2,3,"A","B","c"];
+    let alph=/^[A-Za-z]$/;
+
+    for(let x  of arr){
+        if(alph.test(x))
+        {
+            console.log(x);
+        }
+        else
+        {
+            console.log("No Value")
+        }
+    }
+
+    const array = [10, 20, 30, 40];
+const result = array.map((num) => num / 2).filter((num) => num >= 15);
+console.log(result);
+
+let counter = 0;
+for (var i = 1; i <= 10; i++) {
+  counter+= i;
+}
+console.log(counter);
+console.log(i);
+
+
+const object1 = {
+  a: 10,
+  b: 20,
+  c: function () {
+	console.log(this.a + this.b);
+  },
+};
+object1.c();
+const func = object1.c;
+func();
+</script>

@@ -1,0 +1,37 @@
+<script>
+    // Write a function printNumbers(from, to) that outputs a number every second, starting from from and ending with to.
+    // function printNumbers(from,to){
+    //    let timerId=setInterval(function(){
+    //     console.log(from);
+    //     alert(from);
+    //     if(from==to){
+    //         clearInterval(timerId)
+    //     }
+    //     from++;
+    //    },1000)
+    // }
+    // printNumbers(1,10);
+
+
+    // function printNumbers(from,to){
+    //     setTimeout(function go(){
+    //         // alert(from);
+    //         console.log(from);
+    //         if(from<to){
+    //             setTimeout(go,1000);
+    //         }
+    //         from++;
+    //     },1000)
+    // }
+    // printNumbers(1,10);
+
+
+    let i = 0;
+
+setTimeout(() => alert(i), 100); // 100000000
+
+// assume that the time to execute this function is >100ms
+for(let j = 0; j < 100000000; j++) {
+  i++;
+}
+</script>
