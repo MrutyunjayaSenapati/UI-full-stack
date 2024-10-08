@@ -1,0 +1,32 @@
+<script>
+    // WAP to find total count of vowel
+    let str="Wellcome to Javascript";
+    let Regx=/[a,e,i,o,u]/;
+    let count=0;
+    for(let i=0;i<str.length;i++){
+        if(Regx.test(str[i])){
+            count++;
+        }
+    }
+    console.log(count);
+
+    // WAP to find the given word is pallindrome
+    function pallindrome(word){
+        let left=0;
+        let right=word.length-1;
+      while(left<right){
+
+        if(word[left] != word[right]){
+            return false;
+
+        }
+        left++;
+        right--;
+      }
+      return true;
+
+        
+    }
+    let result=pallindrome("MOM");
+    console.log(result);
+</script>

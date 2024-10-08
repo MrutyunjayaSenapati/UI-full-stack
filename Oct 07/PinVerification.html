@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIN Verification</title>
+    <script>
+let count=0;
+
+function VerifyPin()
+{
+    pin=1234;
+   let entrPin=document.getElementById("pin").value;
+   if(entrPin<6)
+   {
+    alert("Pin is too short");
+   }
+   if(entrPin===pin)
+   {
+    alert("Pin Matched");
+   }
+   else{
+    count++;
+    
+    if(count<3){
+        alert(`Your PIN is wrong ${3-count} attempts left`);
+    }
+    else{
+        alert("Your card is blocked");
+        document.getElementById("btn").disabled=true;
+        document.getElementById("pin").disabled=true;
+    }
+}
+
+   
+}
+
+    </script>
+</head>
+<body>
+    <div>
+        <label>Enter your PIN</label><br>
+        <input max="12" min="6" type="number"id=pin>
+        <button id="btn" onclick="VerifyPin()">Submit</button>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<script>
+    function List(){
+        return ["All","Electronics","Fashion"];
+    }
+    function Rating(){
+        return {
+            Rate:4.5,Count:3000
+        }
+    }
+    function Print(){
+        return function(){
+            document.write(`List=${List().toString()} <br> Rating=${Rating().Rate} [${Rating().Count}]`);
+        }
+    }
+    Print()()
+</script>

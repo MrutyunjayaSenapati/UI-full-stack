@@ -1,0 +1,11 @@
+<script>
+    function details(id,name,price,stock){
+        if(price){
+            document.write(`id=${id}<br> Name=${name}<br>Price=${price} <br> Stock=${stock}`);
+        }
+        else{
+            document.write(`ID=${id}<br> Name=${name}<br> Stock=${stock}`);
+        }
+    }
+    details(1,"TV",undefined,true);
+</script>

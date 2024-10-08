@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var menu = [
+             {Category:"Electronics", Products:["TV", "Mobile", "Watches"]},
+             {Category:"Footwear", Products:["Casuals", "Sneakers"]}
+          ];
+
+        //   using forloop
+        //   function bodyload(){
+        //     for(let i=0;i<menu.length;i++){
+        //         let ol_li=document.createElement("li");
+        //         ol_li.innerHTML=menu[i].Category;
+        //         let ul=document.createElement("ul");
+        //         for(let j=0;j<menu[i].Products.length;j++){
+        //             let ul_li=document.createElement("li");
+        //             ul_li.innerHTML=menu[i].Products[j];
+        //             ul.appendChild(ul_li);
+        //             ol_li.appendChild(ul);
+        //             document.querySelector("ol").appendChild(ol_li);            
+        //         }
+        //     }
+        //   }
+function bodyload(){
+    menu.map(function(item){
+      let ol_li=document.createElement("li");
+      ol_li.innerHTML=item.Category;
+      item.Products.map(function(Product){
+        let ul=document.createElement("ul");
+        let ul_li=document.createElement("li");
+        ul_li.innerHTML=Product;
+        ul.appendChild(ul_li);
+        ol_li.appendChild(ul);
+        document.querySelector("ol").appendChild(ol_li);
+      })
+    })
+}
+
+
+    </script>
+</head>
+<body onload="bodyload()">
+    <ol>
+
+    </ol>
+    
+</body>
+</html>
