@@ -1,0 +1,26 @@
+<script>
+    let FetchAPI=new Promise(function(resolve,reject){
+        let url=prompt("Enter API Url");
+        if(url==="https://fakestore"){
+            resolve([{Name:"TV"},{Name:"Mobile"},{Name:"Watch"}]);
+        }else{
+            reject("Error:Unable to fetch data");
+        }
+    })
+    FetchAPI.then(function(Response){
+        let now=new Date();
+        console.log(now.toLocaleTimeString());
+        console.log(Response);
+    })
+    .then(function(){
+        let now =new Date();
+        console.log(now.toLocaleTimeString());
+        console.log("Presentation Completed");
+    })
+    .catch(function(error){
+        console.log(error);
+    })
+    .finally(function(){
+        console.log("Program End");
+    })
+</script>
