@@ -5,19 +5,255 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Registration From</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        function RegisterClick(){
+            let total=0
+           let cName= document.getElementById("txtName").value;
+           document.getElementById("lblName").innerHTML=cName;
+
+           let date=document.getElementById("txtDate").value;
+           document.getElementById("lblDate").innerHTML=date;
+
+           let Days=document.getElementById("txtDay").value;
+           document.getElementById("lblDays").innerHTML=Days;
+
+           let Person=document.getElementById("txtPerson").value;
+           document.getElementById("lblPerson").innerHTML=Person;
+
+           let dRoom=document.getElementById("deluxeRoom");
+           if (dRoom.checked)
+           {
+            document.getElementById("lblRoom").innerHTML=dRoom.value;
+            cost=2500;
+            total+=cost;
+
+           }
+
+           let sRoom=document.getElementById("suiteRoom");
+           if(sRoom.checked){
+            document.getElementById("lblRoom").innerHTML=sRoom.value;
+            cost=4000;
+            total+=cost;
+           }
+
+           let amen=0;
+           let str=[]
+           let AC=document.getElementById("AC");
+           if(AC.checked){
+             str.push(AC.value);
+             cost=1000;
+             total+=cost;
+
+           }
+           let Locker=document.getElementById("Locker");
+           if(Locker.checked){
+            str.push(Locker.value);
+            cost=300;
+            total+=cost;
+           }
+           if(str.length>0){
+            document.getElementById("lblAmenities").innerHTML=str.join(" ,")
+           }
+           else{
+            document.getElementById("lblAmenities").innerHTML="No Amenities Selectd ";
+           }
+           let advance=document.getElementById("txtAmount").value;
+           document.getElementById("lblAmountAdvance").innerHTML=advance;
+        //    Calculation
+        let TotalBalance=total-advance;
+        document.getElementById("lblAmountBalance").innerHTML=TotalBalance;
+        console.log(total);
+
+
+
+
+        }
+    </script>
 </head>
 <body class=" container-fluid">
     <header>
         <div>
-            <label class=" d-flex justify-content-center fw-bold fs-5 bg-black text-light mt-2 p-1">Hotel Registration Form</label>
+            <label class=" d-flex justify-content-center fw-bold fs-5 bg-black text-light mt-2 p-1"><a href="" class="text-decoration-none text-reset">Hotel Registration Form</a></label>
         </div>
-        <nav>
-            <div>Custme</div>
-        </nav>
+       <div>
+        <ul class="nav nav-tabs">
+            <li class=" nav-item"><a href="#info" class="nav-link active" data-bs-toggle="tab"> Customer Info</a></li>
+
+            <li class=" nav-item"><a href="#room" class="nav-link"data-bs-toggle="tab">Select Room Type</a></li>
+
+            <li class="nav-item"><a class="nav-link" href="#amenities" data-bs-toggle="tab">Select Amenities</a></li>
+
+            <li class="nav-item"><a class="nav-link" href="#advance" data-bs-toggle="tab">Advance Amount</a></li>
+
+            <li class="nav-item"><a class="nav-link" href="#register" data-bs-toggle="tab">Register</a></li>
+
+        </ul>
+       </div>
        
+       <div class="tab-content mt-3">
+        <div class="tab-pane active" id="info">
+           <dl>
+            <dt>Customer Name</dt>
+            <dd>
+                <div class="input-group mb-3">
+                    <span class="input-group-text"> <i class="bi bi-person"></i></span>
+                    <input type="text" id="txtName" class="form-control text-center" name="name" placeholder="Enter Your Name">
+    
+                </div>
+            </dd>
+
+
+            <dt>Check In Date</dt>
+            <dd>
+                <div class="input-group mb-3">
+                    <span class="input-group-text"> <i class="bi bi-calendar"></i></span>
+                    <input id="txtDate"class="form-control"placeholder="Choose Date"  type="date">
+
+                </div>
+            </dd>
+            <dt>Total No of Days</dt>
+            <dd>
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class=" bi bi-stopwatch"></i></span>
+                    <input id="txtDay" type="number"class="form-control"placeholder="">
+                </div>
+            </dd>
+
+
+            <dt>Total No of Persons</dt>
+            <dd>
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class=" bi bi-people"></i></span>
+                    <input id="txtPerson" type="number"class="form-control text-center" placeholder="Enter number of Person">
+                </div>
+            </dd>
+           </dl>
+
+        </div>
+
+        <div class="tab-pane" id="room">
+            <div class="d-flex justify-content-around">
+                <div class="text-center">
+                    <img src="../public/image/suiteRoom1.jpg"class="img-thumbnail" alt="Delux Room">
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input bg-warning
+                        " name="room" id="deluxeRoom"value="Deluxe Room">
+                        <label for="deluxeRoom" class="form-check-label">Delux Room</label>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <img src="../public/image/suiteRoom1.jpg"class="img-thumbnail" alt="Suite Room">
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input bg-warning
+                        " name="room" id="suiteRoom" value="Suite Room">
+                        <label for="suiteRoom" class="form-check-label">Suite Room</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="amenities">
+            <div class="d-flex justify-content-around">
+                <div class="text-center">
+                    <img src="../public/image/suiteRoom1.jpg"class="img-thumbnail" alt="A/C">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input bg-warning
+                        " name="checkbox" id="AC" value="AC">
+                        <label for="AC" class="form-check-label">A/C</label>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <img src="../public/image/suiteRoom1.jpg"class="img-thumbnail" alt="locker">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input bg-warning
+                        " name="checkbox" id="Locker" value="Locker">
+                        <label for="Locker" class="form-check-label">Locker</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="advance">
+            <dl>
+                <dt>Advance Amount</dt>
+            </dl>
+            <dd>
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-currency-rupee"></i></span>
+                    <input type="number" class="form-control" name="amount" placeholder="Enter Amount" id="txtAmount" min="500" required>
+                </div>
+
+            </dd>
+           
+        </div>
+
+        <div class="tab-pane" id="register">
+            <div class="register-button text-center">
+                <button class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#registerModal" onclick="RegisterClick()">Register</button>
+            </div>
+        </div>
+        
+
+
+       </div>
 
     </header>
+    <div class="modal fade" id="registerModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>User Details</h4>
+                    <button data-bs-dismiss="modal" class="btn btn-close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th class="py-2">Customer Name: </th>
+                                <td id="lblName" class="py-2"></td>
+                            </tr>
+                            <tr>
+                                <th class="py-2">Check-In Date: </th>
+                                <td id="lblDate" class="py-2"></td>
+                            </tr>
+                            <tr>
+                                <th class="py-2">Total No of Days: </th>
+                                <td id="lblDays" class="py-2"></td>
+                            </tr>
+                            <tr>
+                                <th class="py-2">Total No of Persons: </th>
+                                <td id="lblPerson" class="py-2"></td>
+                            </tr>
+                            <tr>
+                                <th class="py-2">Room Type: </th>
+                                <td id="lblRoom" class="py-2"></td>
+                            </tr>
+                            <tr>
+                                <th class="py-2">Amenities: </th>
+                                <td id="lblAmenities" class="py-2"></td>
+                            </tr>
+                            <tr>
+                                <th class="py-2">Amount Advance: </th>
+                                <td id="lblAmountAdvance" class="py-2"></td>
+                            </tr>
+                            <tr>
+                                <th class="py-2">Balance Amount: </th>
+                                <td id="lblAmountBalance" class="py-2"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="modal-footer">
+                    <button data-bs-dismiss="modal" class="btn btn-success">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
     
 </body>
 </html>
