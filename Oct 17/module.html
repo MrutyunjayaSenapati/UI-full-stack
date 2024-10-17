@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module</title>
+    <script type="Module">
+        import User, {Admin} from "./script.js"
+        import { Add,Sub,MultiPlication,Divison } from "./Calculate.js";
+        let a=4;
+        let b=5;
+        document.querySelector("p").innerHTML=Admin()+"<br>"+User();
+        document.getElementById("calc").innerHTML=Add(a,b)+"<br>"+Sub(a,b)+"<br>"+MultiPlication(a,b)+"<br>"+Divison(a,b);
+    </script>
+</head>
+<body>
+    <p></p>
+    <div id="calc"></div>
+</body>
+</html>

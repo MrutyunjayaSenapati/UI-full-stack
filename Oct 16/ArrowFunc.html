@@ -1,0 +1,29 @@
+<script>
+    // var hello= userName=>`Hello! ${userName}<br>`;
+    // var addition=(a,b)=>a+b;
+    // document.write(hello("John"));
+    // document.write(addition(10,40));
+
+    // fetch("https://fakestoreapi.com/products")
+    // .then((response)=>response.json())
+    // .then(products=>{
+    //     products.map(product=>{
+    //         document.write(`<li>${product.title}</li>`)
+    //     })
+    // })
+
+
+    var products = [
+      {Name: "TV", Category:"Electronics"},
+      {Name: "Mobile", Category:"Electronics"},
+      {Name: "Nike Casuals", Category:"Footwear"},
+      {Name: "Jeans", Category:"Fashion"}
+     ]
+     var Electronics=products.filter(product=>product.Category==="Electronics");
+     for(x of Electronics)
+     document.write(x.Name);
+// products.forEach(product=>{
+//     document.write(product.Name+"<br>");
+// })
+
+</script>
