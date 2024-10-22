@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Database(ob,e){
+            document.write(`Button Id:${ob.id}<br> Button value:${ob.value}<br>X Position: ${e.clientX}<br> Ctrl Key:${e.ctrlKey}`);
+
+        }
+       function ImageClick(e){
+        console.log("x: "+e.clientX+"  Y: "+e.clientY);
+        if((e.clientX>=33 && e.clientX<77)&&(e.clientY>419 && e.clientY<471)){
+            document.getElementById("msg").innerHTML=`Shoe price:1000`;
+
+        }
+
+
+        }
+    </script>
+</head>
+<body>
+    <img  id="img"  onclick="ImageClick(event)" src="../public/image/kid.jpg" style="height: 600px; width: 400px;">
+    <p id="msg"></p>
+    <button id="btnInsert" value="Insert" onclick="Database(this,event)">Insert</button>
+
+    <button id="btnUpdate" value="Update" onclick="Database(this,event)">Update</button>
+
+    <button id="btnDelete" value="Delete" onclick="Database(this,event)">Delete</button>
+
+</body>
+</html>
