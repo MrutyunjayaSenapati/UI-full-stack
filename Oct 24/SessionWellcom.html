@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellcome</title>
+    <script>
+function SessionEnd(){
+    alert('Your session Timed out-Please relogin');
+    sessionStorage.removeItem("username");
+    location.href="./SessionLogin.html";
+}
+function bodyload(){
+    if(sessionStorage.getItem("username")===null){
+        location.href="./SessionLogin.html";
+    }
+    else{
+        document.getElementById("user").innerHTML=sessionStorage.getItem("username");
+        setTimeout(SessionEnd,10000);
+    }
+}
+function SignOutClick(){
+    sessionStorage.removeItem("username");
+    location.href="./SessionLogin.html";
+}
+
+    </script>
+</head>
+<body onload="bodyload()">
+    <h2>Wellcome <span id="user"></span></h2> <button onclick="SignOutClick()">SignOut</button>
+    
+</body>
+</html>

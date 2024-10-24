@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function GetDetails(msg){
+            document.querySelector("h1").innerHTML=msg;
+        }
+    </script>
+</head>
+<body>
+    <img ontouchstart="GetDetails('30% OFF on Women Clothing')" src="../public/image/Women.jpg" alt="women" height="200" width="200">
+    <img ontouchstart="GetDetails('50% OFF on Men Fashion wear')" src="../public/image/men.jpg" alt="" width="200" height="200">
+    <img ontouchstart="GetDetails('50% OFF on Kid Fashion wear')" src="../public/image/kid.jpg" width="200" height="200" alt="">
+    <h1></h1>
+</body>
+</html>

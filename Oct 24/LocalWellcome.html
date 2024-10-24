@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wellcome</title>
+    <script>
+        function bodyload(){
+            if(localStorage.getItem("username")===null){
+                location.href="./LocalLogin.html";
+            }
+            else{
+                document.getElementById("user").innerHTML=localStorage.getItem("username");
+            }
+        }
+    </script>
+
+</head>
+<body onload="bodyload()">
+    <h2> Wellcome <span id="user"></span><button onclick="SignoutClick()"> Signout</button></h2>
+</body>
+</html>

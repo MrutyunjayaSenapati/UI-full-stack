@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background: #000;
+        }
+        img{
+            border-radius: 50%;
+            animation: Rotate 1s linear 0s infinite;
+        }
+        @keyframes Rotate {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform:rotate(360deg);
+
+            }
+            
+        }
+    </style>
+    <script></script>
+</head>
+<body style="display: flex;justify-content: center;align-items:center ; height: 100vh;">
+    <img onmouseover="Fast()"onmouseout="Slow()" src="../public/image/Hypno3.jpg" width="600" height="600" alt="">
+</body>
+</html>
