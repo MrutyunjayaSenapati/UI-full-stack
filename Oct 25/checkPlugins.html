@@ -1,0 +1,11 @@
+<script>
+    for(var plugin of navigator.plugins){
+        document.write(plugin.name+"<br>");
+    }
+    if(navigator.plugins['PDF Viewer']){
+        document.write("You can watch PDF documents");
+    }
+    else{
+        document.write("Please install PDF plugin for your browser");
+    }
+</script>

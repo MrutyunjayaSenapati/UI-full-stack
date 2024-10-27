@@ -1,0 +1,28 @@
+<script>
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                document.write(`Latitude: ${position.coords.latitude}<br>
+                Longitude: ${position.coords.longitude}`);
+            },
+            (error) => {
+                switch(error.code) {
+                    case error.PERMISSION_DENIED:
+                        document.write("User denied the request for Geolocation.");
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        document.write("Location information is unavailable.");
+                        break;
+                    case error.TIMEOUT:
+                        document.write("The request to get user location timed out.");
+                        break;
+                    case error.UNKNOWN_ERROR:
+                        document.write("An unknown error occurred.");
+                        break;
+                }
+            }
+        );
+    } else {
+        document.write("Geolocation is not supported by this browser.");
+    }
+</script>
